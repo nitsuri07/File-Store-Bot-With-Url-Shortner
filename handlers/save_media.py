@@ -70,8 +70,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: <code>{short_link}</code> \n\n"
             f"Just Click the link to get your files!",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Original Link", url=share_link),
-                  InlineKeyboardButton("Short Link", url=short_link)]]
+                [[InlineKeyboardButton("Original Link", url=share_link)]]     
             ),
             disable_web_page_preview=True
         )
