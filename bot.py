@@ -72,22 +72,13 @@ async def start(bot: Client, cmd: Message):
             Config.HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
-                    ],
-                    [
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion"),
-                        InlineKeyboardButton("YouTube Channel", url="https://youtube.com/@Tech_VJ")
-                    ]
-                ]
-            )
-        )
+        [
+            [InlineKeyboardButton("Update Channel", url="https://t.me/neet2024m")],
+            [InlineKeyboardButton("Support Group", url="https://t.me/neetjee20250")]
+        ]
+    )
+ 
+    )   
     else:
         try:
             try:
@@ -124,7 +115,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/neetjee20250)",
                                      disable_web_page_preview=True)
             return
 
@@ -314,7 +305,7 @@ async def button(bot: Client, cmd: CallbackQuery):
     if "aboutbot" in cb_data:
         await cmd.message.edit(
             Config.ABOUT_BOT_TEXT,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -332,7 +323,7 @@ async def button(bot: Client, cmd: CallbackQuery):
     elif "aboutdevs" in cb_data:
         await cmd.message.edit(
             Config.ABOUT_DEV_TEXT,
-            disable_web_page_preview=True,
+            disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -352,22 +343,13 @@ async def button(bot: Client, cmd: CallbackQuery):
             Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
-                    ],
-                    [
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion"),
-                        InlineKeyboardButton("YouTube Channel", url="https://youtube.com/@Tech_VJ")
-                    ]
-                ]
-            )
-        )
+        [
+            [InlineKeyboardButton("Update Channel", url="https://t.me/neet2024m")],
+            [InlineKeyboardButton("Support Group", url="https://t.me/neetjee20250")]
+        ]
+    )
+ 
+    )   
 
     elif "refreshForceSub" in cb_data:
         if Config.UPDATES_CHANNEL:
@@ -379,7 +361,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/neetjee20250).",
                         disable_web_page_preview=True
                     )
                     return
@@ -401,7 +383,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion).",
+                    text="Something went Wrong. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/neetjee20250).",
                     disable_web_page_preview=True
                 )
                 return
@@ -409,19 +391,13 @@ async def button(bot: Client, cmd: CallbackQuery):
             text=Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/VJ_Botz"),
-                        InlineKeyboardButton("Support Group", url="https://t.me/VJ_Bot_Disscussion")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                    ]
-                ]
-            )
-        )
-
+        [
+            [InlineKeyboardButton("Update Channel", url="https://t.me/neet2024m")],
+            [InlineKeyboardButton("Support Group", url="https://t.me/neetjee20250")]
+        ]
+    )
+ 
+    )   
     elif cb_data.startswith("ban_user_"):
         user_id = cb_data.split("_", 2)[-1]
         if Config.UPDATES_CHANNEL is None:
