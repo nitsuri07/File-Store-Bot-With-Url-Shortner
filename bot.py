@@ -362,7 +362,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 if user.status == "kicked":
                     await cmd.message.edit(
                         text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/neetjee20250).",
-                        disable_web_page_preview=False
+                        disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
@@ -384,7 +384,7 @@ async def button(bot: Client, cmd: CallbackQuery):
             except Exception:
                 await cmd.message.edit(
                     text="Something went Wrong. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/neetjee20250).",
-                    disable_web_page_preview=False
+                    disable_web_page_preview=True
                 )
                 return
         await cmd.message.edit(
