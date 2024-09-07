@@ -68,9 +68,9 @@ async def start(bot: Client, cmd: Message):
             for message_id in message_ids:
                 await send_media_and_reply(bot, user_id=cmd.from_user.id, file_id=int(message_id))
         
-        except Exception:
-            # Error handling removed
-            pass
+        except Exception as err:
+            await cmd.reply_text(f"Something went wrong! Contact support.\n\n**Error:** `{err}`")
+
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio | filters.photo) & ~filters.chat(Config.DB_CHANNEL))
