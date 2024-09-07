@@ -62,7 +62,7 @@ async def start(bot: Client, cmd: Message):
             await cmd.reply_text(
                 text=f"**Total Files:** `{len(message_ids)}`",
                 quote=True,
-                disable_web_page_preview=True
+                disable_web_page_preview=False
             )
             
             for message_id in message_ids:
