@@ -31,11 +31,11 @@ class Config(object):
     ╰──────[ 😎 ]───────────⍟
     """
     ABOUT_DEV_TEXT = f"""
-    🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [R3](https://telegram.me/Rajps33)
+    🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [R3](https://telegram.me/Mrx6996)
 
     I am Super noob Please Support My Hard Work.
 
-    [Donate Me](https://t.me/Rajps33)
+    [Donate Me](https://t.me/Mrx6996)
     """
     HOME_TEXT = """
     Hᴇʟʟᴏ, [{}](tg://user?id={})\n\nᴛʜɪs ɪs ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ  **ғɪʟᴇsᴛᴏʀᴇ ʙᴏᴛ**.
